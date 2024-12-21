@@ -80,3 +80,20 @@ Note that we normalize the reference direction such that the modified difference
 2. Each agent performs $U$ local updates and sends the model difference to the server.
 3. Server calculates the reference direction and the degree of divergence.
 4. Server modifies the model difference and aggregates the modified differences.
+
+### Defending Against Byzantine Attacks
+To deal with Byzantine attacks, we need to make adaptations to the DRAG algorithm. Since the malicious attacks can undermine the effectiveness of the reference direction, we update the definition of reference direction in this setup. 
+
+**Reference direction for Byzantine attacks**: The server maintains a small root dataset $D_{root}$. At each round $t$, the server also updates a copy of the current global model for $U$ iterations using the root dataset:
+
+![image](https://github.com/user-attachments/assets/1e4a3788-7c76-44d0-8122-737700d3edd8)
+
+The reference direction is then defined as
+
+![image](https://github.com/user-attachments/assets/4401f67a-3714-4e4f-88dd-3075505e6a07)
+
+We also need to update the vector manipulation procedure in this case, since the malicious agents might scale the module of the local model differences.
+
+**Vector manipulation for Byzantine attacks**: The modified model difference is defined as
+
+![image](https://github.com/user-attachments/assets/e9e37d24-749c-48c7-a83c-bb6977b64ff2)
