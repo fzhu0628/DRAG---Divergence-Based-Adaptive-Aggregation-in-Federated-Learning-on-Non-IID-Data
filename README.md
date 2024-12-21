@@ -97,3 +97,21 @@ We also need to update the vector manipulation procedure in this case, since the
 **Vector manipulation for Byzantine attacks**: The modified model difference is defined as
 
 ![image](https://github.com/user-attachments/assets/e9e37d24-749c-48c7-a83c-bb6977b64ff2)
+
+## Convergence Analysis
+Assuming each local loss function is smooth and lower-bounded, and assuming that the local gradient estimator is unbiased and has bounded variance, we show that DRAG converges to the first-order stationary point (FOSP) at a sublinear rate:
+
+![image](https://github.com/user-attachments/assets/6ed0b694-096c-44de-a7cb-89af913d4dc2)
+
+## Numerical Results
+### Client-Drift Mitigation
+We compare our DRAG algorithm with advanced algorithms on the CIFAR-10 dataset:
+
+![image](https://github.com/user-attachments/assets/e783c64b-e645-43f3-9f57-a8eb4c954286)
+
+
+### Byzantine Attack
+We compare DRAG with other algorithms under Byzantine attacks with high data heterogeneity:
+
+![image](https://github.com/user-attachments/assets/6a9bb515-f342-43cb-879c-5bb4054a9bcf)
+
