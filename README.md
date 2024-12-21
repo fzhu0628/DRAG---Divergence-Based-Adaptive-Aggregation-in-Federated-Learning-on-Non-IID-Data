@@ -116,3 +116,5 @@ We compare DRAG with other algorithms under Byzantine attacks with high data het
 ![image](https://github.com/user-attachments/assets/6a9bb515-f342-43cb-879c-5bb4054a9bcf)
 
 ## Codes
+- The file ``DRAG_cifar.py`` conducts comparisons of ACAG with other algorithms on the CIFAR-10 dataset.
+- The file ``DRAG_byzantine.py`` compares ACAG with other algorithms on the CIFAR-10 dataset, accounting for the malicious agents.
